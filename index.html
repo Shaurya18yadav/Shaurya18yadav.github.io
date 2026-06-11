@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon.in: Online Shopping India</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-top">
+      <a class="logo" href="#" aria-label="Amazon home">
+        <span>amazon</span><small>.in</small>
+      </a>
+
+      <button class="deliver-to" type="button">
+        <span>Delivering to New Delhi 110001</span>
+        <strong>Update location</strong>
+      </button>
+
+      <form class="search" id="searchForm">
+        <select aria-label="Department">
+          <option>All</option>
+          <option>Electronics</option>
+          <option>Home & Kitchen</option>
+          <option>Fashion</option>
+          <option>Books</option>
+        </select>
+        <input id="searchInput" type="search" placeholder="Search Amazon.in" autocomplete="off">
+        <button type="submit" aria-label="Search">
+          <span aria-hidden="true">⌕</span>
+        </button>
+      </form>
+
+      <button class="nav-link language" type="button">
+        <span>EN</span>
+      </button>
+      <button class="nav-link" type="button">
+        <span>Hello, sign in</span>
+        <strong>Account & Lists</strong>
+      </button>
+      <button class="nav-link orders" type="button">
+        <span>Returns</span>
+        <strong>& Orders</strong>
+      </button>
+      <button class="cart-link" id="cartButton" type="button" aria-label="Open cart">
+        <span class="cart-count" id="cartCount">0</span>
+        <span class="cart-basket" aria-hidden="true"></span>
+        <strong>Cart</strong>
+      </button>
+    </div>
+
+    <nav class="nav-bottom" aria-label="Main departments">
+      <button type="button">☰ All</button>
+      <a href="#deals">Today's Deals</a>
+      <a href="#electronics">Mobiles</a>
+      <a href="#home">Home & Kitchen</a>
+      <a href="#fashion">Fashion</a>
+      <a href="#mini">Amazon miniTV</a>
+      <a href="#sell">Sell</a>
+      <a href="#prime">Prime</a>
+      <a href="#service">Customer Service</a>
+      <a href="#fresh">Fresh</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Featured offers">
+      <button class="hero-arrow" id="prevSlide" type="button" aria-label="Previous offer">‹</button>
+      <div class="hero-track" id="heroTrack"></div>
+      <button class="hero-arrow next" id="nextSlide" type="button" aria-label="Next offer">›</button>
+    </section>
+
+    <section class="storefront" aria-label="Shopping sections">
+      <div class="category-grid">
+        <article class="category-card">
+          <h2>Revamp your home in style</h2>
+          <div class="category-tiles">
+            <button data-query="cushion covers"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=320&q=80" alt="">Cushion covers</button>
+            <button data-query="home storage"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=320&q=80" alt="">Home storage</button>
+            <button data-query="lighting"><img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=320&q=80" alt="">Lighting</button>
+            <button data-query="wall art"><img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=320&q=80" alt="">Wall art</button>
+          </div>
+          <a href="#home">Explore all</a>
+        </article>
+
+        <article class="category-card">
+          <h2>Appliances for your home</h2>
+          <div class="category-tiles">
+            <button data-query="air conditioners"><img src="https://images.unsplash.com/photo-1631545806609-07e2742d4599?w=320&q=80" alt="">Air conditioners</button>
+            <button data-query="refrigerators"><img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=320&q=80" alt="">Refrigerators</button>
+            <button data-query="microwaves"><img src="https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=320&q=80" alt="">Microwaves</button>
+            <button data-query="washing machines"><img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=320&q=80" alt="">Washing machines</button>
+          </div>
+          <a href="#home">See more</a>
+        </article>
+
+        <article class="category-card sign-in-card">
+          <h2>Sign in for your best experience</h2>
+          <button type="button">Sign in securely</button>
+          <div class="ad-box">
+            <span>Sponsored</span>
+            <strong>Up to 40% off on headphones</strong>
+          </div>
+        </article>
+
+        <article class="category-card">
+          <h2>Starting &#8377;149 | Bestselling styles</h2>
+          <div class="category-tiles">
+            <button data-query="women kurta"><img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=320&q=80" alt="">Women</button>
+            <button data-query="men shirts"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=320&q=80" alt="">Men</button>
+            <button data-query="running shoes"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=320&q=80" alt="">Shoes</button>
+            <button data-query="watches"><img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=320&q=80" alt="">Watches</button>
+          </div>
+          <a href="#fashion">Shop fashion</a>
+        </article>
+      </div>
+
+      <section class="deal-strip" id="deals">
+        <div>
+          <span>Limited time deal</span>
+          <h2>Up to 75% off | Electronics, home essentials and fashion</h2>
+        </div>
+        <button type="button" data-query="today deals">See all deals</button>
+      </section>
+
+      <section class="product-section" id="electronics">
+        <div class="section-head">
+          <h2>Best sellers in Electronics</h2>
+          <a href="#">See more</a>
+        </div>
+        <div class="products-grid" id="electronicsGrid"></div>
+      </section>
+
+      <section class="product-section" id="home">
+        <div class="section-head">
+          <h2>Home & Kitchen picks</h2>
+          <a href="#">Explore more</a>
+        </div>
+        <div class="products-grid" id="homeGrid"></div>
+      </section>
+
+      <section class="product-section" id="fashion">
+        <div class="section-head">
+          <h2>Recommended deals in fashion</h2>
+          <a href="#">View all</a>
+        </div>
+        <div class="products-grid" id="fashionGrid"></div>
+      </section>
+
+      <section class="recent-section">
+        <div class="section-head">
+          <h2>Inspired by your browsing history</h2>
+          <a href="#">Manage history</a>
+        </div>
+        <div class="recent-row" id="recentRow"></div>
+      </section>
+    </section>
+  </main>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-panel-head">
+        <h2 id="cartTitle">Shopping Cart</h2>
+        <button id="closeCart" type="button" aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-summary">
+        <p id="cartSubtotal">Subtotal (0 items): &#8377;0</p>
+        <label><input type="checkbox" checked> This order contains a gift</label>
+        <button type="button">Proceed to Buy</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer>
+    <a href="#">Back to top</a>
+    <div class="footer-links">
+      <section>
+        <h3>Get to Know Us</h3>
+        <p>About Amazon</p>
+        <p>Careers</p>
+        <p>Press Releases</p>
+      </section>
+      <section>
+        <h3>Connect with Us</h3>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Instagram</p>
+      </section>
+      <section>
+        <h3>Make Money with Us</h3>
+        <p>Sell on Amazon</p>
+        <p>Advertise Your Products</p>
+        <p>Amazon Pay on Merchants</p>
+      </section>
+      <section>
+        <h3>Let Us Help You</h3>
+        <p>Your Account</p>
+        <p>Returns Centre</p>
+        <p>Help</p>
+      </section>
+    </div>
+    <small>Clone for educational purposes. Product names, prices and imagery are sample marketplace data.</small>
+  </footer>
+</body>
+</html>
